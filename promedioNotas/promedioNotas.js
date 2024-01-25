@@ -10,6 +10,16 @@ calcularPromedioNotas=function(){
 
     cambiarTexto("lblResultado",promedioRedondeado);
 
+    if(promedioRedondeado>7){
+        cambiarImagen("lblImg","./imagenes/feliz.gif")
+
+    }else{
+        cambiarImagen("lblImg","./imagenes/triste.gif")
+
+    }
+
+   
+
 
 
 
