@@ -24,14 +24,12 @@ modificarPuntos=function(numeros){
     //mostarar en pantalla que GANASTE
     //invovar a limpiar 
     if(puntos>=20){
-        cambiarTexto("lblGano","GANASTE!!")
 
-        limpiar("lblPuntos", "0")
+        cambiarTexto("lblGano","GANASTE!!");
 
-        
-            
+        limpiar();
+                
     }
-   
 
 }
 
@@ -42,10 +40,9 @@ modificicarLanzamientos=function(){
 
         cambiarTexto("lblLanzar",lanzamientos)
 
-        if(lanzamientos==0){
-            cambiarTexto("lblGano","GAMER OVER")
-
-            
+        if(lanzamientos<=0){
+            cambiarTexto("lblGano","GAMER OVER");
+            limpiar();
 
             
         }           
@@ -56,9 +53,10 @@ modificicarLanzamientos=function(){
 
 limpiar=function(){
 
-    cambiarTexto("lblPuntos","")
-    cambiarTexto("lblLanzar","")
+    cambiarTexto("lblPuntos","0")
+    cambiarTexto("lblLanzar","5")
     cambiarTexto("lblGano","")
+    cambiarImagen("imgDado1","")
 
 
 }
